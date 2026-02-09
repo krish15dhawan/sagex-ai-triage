@@ -18,11 +18,11 @@ This is meant as a “first pass triage assistant” — consistent formatting, 
 ---
 
 ## LLM Used (Meta, not GPT)
-This project uses a **Meta Llama-family model** (ex: Llama 3 / Llama 3.1 / another Meta checkpoint). It does **not** use GPT.
+This project uses a **Meta Llama-family model**  Llama 3.1 . 
 
 ### Why Meta
 - **Local control** (tickets can be processed without sending data to third-party hosted APIs)
-- **Predictable cost** (local inference)
+- **Predictable cost** (local inference and no costs)
 - **Fast iteration** (prompt + schema changes are easy)
 
 ### Where the model runs
@@ -31,8 +31,6 @@ This repo is designed to run the Meta model locally through one of the common ru
 - **Transformers** (HuggingFace) if you are loading weights directly, or
 - **llama.cpp / llama-cpp-python** for CPU/GGUF-style inference
 
-> Your code chooses one of these. The setup below includes the most common option (Ollama).
-> If you’re using Transformers or llama.cpp, see “Alternative runtimes” below.
 
 ---
 
@@ -57,10 +55,6 @@ This repo is designed to run the Meta model locally through one of the common ru
 **Decision:** Use low temperature (or equivalent) + strict formatting rules.
 **Why:** Triage should be stable across runs; creativity is not the goal.
 
-### 5) Evidence + rationale included
-**Decision:** Each ticket includes quoted evidence from the input plus a short rationale for severity/priority.
-**Why:** Reviewers want to see “why did the model decide this,” not just the result.
-
 ---
 
 ## Prompting approach (exact intent)
@@ -83,28 +77,19 @@ The prompt is designed around these steps:
    - next steps / acceptance criteria
 3. Output strict JSON matching schema
 
-> If your repo contains the literal prompt text (common), it will be in a file like `prompt.txt`, `prompts/`, or embedded in the main script.
 
 ---
 
-## Repository structure (what each thing does)
-> NOTE: I can’t reliably read your repo tree from GitHub right now, so this section is written to match the **typical structure** for this project.  
-> If a filename differs, change it in **two places**:
-> 1) the “Run” command
-> 2) the “Files” list below
+## Repository structure 
 
 ### Common folders
 - `sample_docs/`
   - Input `.txt` documents used as test cases (provided below)
-- `outputs/` (ignored by git)
-  - JSON results produced by running the pipeline
-- `.venv/` (ignored by git)
-  - Local virtual environment
-- `.env` (ignored by git)
-  - Environment variables (model name, runtime, etc.)
+- `app/` 
+  - Stores the question extraction and route Python files.
 
 ### Common key files
-- `run.py` (or similar)
+- `run.py` 
   - Main entry point: reads docs → calls model → writes JSON
 - `requirements.txt`
   - Python dependencies
