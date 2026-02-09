@@ -1,0 +1,18 @@
+{
+  "id": "TKT-001",
+  "ticket": {
+    "title": "Random User Logout/Blank Dashboard",
+    "summary": "Users get randomly logged out or see a blank dashboard in production.",
+    "type": "bug",
+    "priority": "high",
+    "affected_area": [
+      "frontend",
+      "backend"
+    ],
+    "confidence": 0.8
+  },
+  "routing": {
+    "team": "Engineering",
+    "why": "Random users are getting logged out or seeing a blank dashboard in production."
+  }
+}
