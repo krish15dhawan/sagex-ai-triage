@@ -1,0 +1,24 @@
+
+=== PART 1: Q&A ===
+The problems mentioned are:
+
+1. The need for Single Sign-On (SSO) login for enterprise users.
+2. Manual authentication is blocking the rollout to larger customers.
+3. The dashboard loads slowly when displaying more than 500 records.
+
+=== PART 2: EXTRACT (JSON tickets) ===
+[{'title': 'SSO Login for Enterprise Users', 'summary': 'Implement single sign-on login for enterprise users to improve authentication efficiency and enable large-scale customer rollouts.', 'type': 'feature', 'priority': 'high', 'affected_area': ['auth'], 'confidence': 0.95}, {'title': 'Improve Dashboard Load Times', 'summary': 'Optimize dashboard performance to prevent slow load times when displaying over 500 records.', 'type': 'change', 'priority': 'high', 'affected_area': ['frontend'], 'confidence': 0.85}]
+
+=== PART 3: ROUTE + ACTION ===
+
+TKT-001
+TITLE: SSO Login for Enterprise Users
+ROUTE TO: Product QUEUE
+WHY: Implement single sign-on login for enterprise users to improve authentication efficiency and enable large-scale customer rollouts.
+
+TKT-002
+TITLE: Improve Dashboard Load Times
+ROUTE TO: Product QUEUE
+WHY: Improve Dashboard Load Times
+
+Saved routed tickets to: outputs/

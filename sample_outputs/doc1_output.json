@@ -1,0 +1,23 @@
+
+=== PART 1: Q&A ===
+Two problems are mentioned:
+
+1. Manual authentication for enterprise users, which is a bottleneck for large customers.
+2. The dashboard loads slowly when displaying over 500 records.
+
+=== PART 2: EXTRACT (JSON tickets) ===
+[{'title': 'Implement Single Sign-On (SSO) login for enterprise users', 'summary': 'Currently, authentication is manual which blocks rollout to larger customers.', 'type': 'feature', 'priority': 'high', 'affected_area': ['auth', 'backend'], 'confidence': 0.9}, {'title': 'Improve dashboard loading speed for large datasets', 'summary': 'The dashboard loads slowly when displaying more than 500 records.', 'type': 'bug', 'priority': 'high', 'affected_area': ['frontend'], 'confidence': 0.8}]
+
+=== PART 3: ROUTE + ACTION ===
+
+TKT-001
+TITLE: Implement Single Sign-On (SSO) login for enterprise users
+ROUTE TO: Product QUEUE
+WHY: Implementing Single Sign-On (SSO) login will enable enterprise users to securely authenticate, facilitating rollout to larger customers.
+
+TKT-002
+TITLE: Improve dashboard loading speed for large datasets
+ROUTE TO: Engineering QUEUE
+WHY: The dashboard loads slowly when displaying more than 500 records.
+
+Saved routed tickets to: outputs/

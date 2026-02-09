@@ -1,0 +1,23 @@
+
+=== PART 1: Q&A ===
+Two problems are mentioned:
+
+1. Manual authentication for enterprise users, which prevents rollout to larger customers.
+2. The dashboard loading slowly when displaying more than 500 records.
+
+=== PART 2: EXTRACT (JSON tickets) ===
+[{'title': 'SSO Login', 'summary': 'Enterprise SSO login for easier authentication', 'type': 'feature', 'priority': 'high', 'affected_area': ['auth', 'backend'], 'confidence': 0.9}, {'title': 'Dashboard Speed Improvement', 'summary': 'Improve dashboard loading speed for large record sets', 'type': 'change', 'priority': 'high', 'affected_area': ['frontend'], 'confidence': 1.0}]
+
+=== PART 3: ROUTE + ACTION ===
+
+TKT-001
+TITLE: SSO Login
+ROUTE TO: Product QUEUE
+WHY: The ticket is a feature request for Enterprise SSO login for easier authentication.
+
+TKT-002
+TITLE: Dashboard Speed Improvement
+ROUTE TO: Product QUEUE
+WHY: The ticket requires a change to improve the dashboard loading speed for large record sets.
+
+Saved routed tickets to: outputs/
