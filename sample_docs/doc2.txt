@@ -1,0 +1,1 @@
+The billing page sometimes crashes when exporting invoices. Additionally, customers are requesting PDF summaries of usage. This affects finance teams directly.

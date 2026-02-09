@@ -1,0 +1,3 @@
+Our security team noticed API keys are visible in browser logs.
+This could expose sensitive customer data.
+We also want audit logs for admin actions.

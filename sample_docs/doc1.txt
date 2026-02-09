@@ -1,1 +1,3 @@
-Our web app works fine locally, but in production users randomly get logged out or see a blank dashboard. It happens more on mobile and only after about 10–15 minutes. No errors show up in the UI, but the API occasionally returns 401 Unauthorized even though the user just logged in.
+We need SSO login for enterprise users. Currently authentication is manual and this blocks rollout to larger customers.
+Also the dashboard loads very slowly when more than 500 records are displayed.
+Priority is high as we have two customers waiting.
